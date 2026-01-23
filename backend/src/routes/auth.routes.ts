@@ -1,9 +1,9 @@
 import { Router } from "express";
-import * as authController from "../controllers/auth.controller.js";
-import * as userController from "../controllers/user.controller.js";
-import { protect } from "../middlewares/auth.middleware.js";
-import { requestValidation } from "../validators/requestValidation.js";
-import { loginSchema, signupSchema, userIdSchema } from "../validators/auth.validator.js";
+import * as authController from "../controllers/auth.controller.ts";
+import * as userController from "../controllers/user.controller.ts";
+import { protect } from "../middlewares/auth.middleware.ts";
+import { requestValidation } from "../validators/requestValidation.ts";
+import { loginSchema, signupSchema, userIdSchema } from "../validators/auth.validator.ts";
 
 const router = Router();
 
