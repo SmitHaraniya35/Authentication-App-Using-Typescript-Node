@@ -13,6 +13,6 @@ export const signupSchema = Joi.object({
     password: Joi.string().min(8).required()
 })
 
-export const userIdSchema = Joi.object({
-    userId: Joi.string().required()
-})
+// export const userIdSchema = Joi.object({
+//     userId: Joi.string().required()
+// })

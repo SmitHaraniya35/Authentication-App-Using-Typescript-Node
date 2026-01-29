@@ -1,12 +1,13 @@
-import type { QueryFilter, UpdateQuery } from "mongoose";
+import type { ProjectionType, QueryFilter, UpdateQuery } from "mongoose";
 import type { BaseModel } from "./models/base.model.ts";
 
 export class BaseClass<T>{
     static async findActive<T>(
         this: BaseModel<T>,
-        filter: QueryFilter<T> = {}
+        filter: QueryFilter<T> = {},
+        filterOptions: ProjectionType<T> = {}
     ): Promise<any> {
-        return this.find({ ...filter, isDeleted: false });
+        return this.find({ ...filter, isDeleted: false }, filterOptions);
     }
 
     static async findAll<T>(

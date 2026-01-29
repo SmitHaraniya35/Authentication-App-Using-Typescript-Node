@@ -23,8 +23,12 @@ export const SUCCESS_MESSAGES = {
   CREATED: "Created",
 
   USER_CREATED: "User registered successfully",
+  USER_FETCHED: "User fetched successfully",
   USERS_DATA_FETCHED_SUCCESS: "User data fetched successfully",
+
   LOGIN_SUCCESS: "Login successful",
+  LOGOUT_SUCCESS: "Logout successful",
+  
   ACCESS_TOKEN_SUCCESS: "Access token generated successfully",
 };
 

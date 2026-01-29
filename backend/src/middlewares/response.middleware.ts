@@ -1,8 +1,9 @@
 import type { Response, NextFunction, Request } from "express";
 import { HttpStatusCode, SUCCESS_MESSAGES, ERROR_MESSAGES } from "../constants.ts";
+import type { AuthRequest } from "../types/controllers/index.ts";
 
 export function responseMiddleware(
-  req: Request,
+  req: AuthRequest,
   res: Response,
   next: NextFunction
 ) {

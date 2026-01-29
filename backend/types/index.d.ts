@@ -12,7 +12,7 @@ declare global {
             internalError(message?: string): this;
         }
 
-        interface Request{
+        interface Request {
             allParams: Record<string, any>;
             validateData: any
         }

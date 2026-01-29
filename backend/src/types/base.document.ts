@@ -1,7 +1,7 @@
-import mongoose, { Document } from "mongoose";
+import { Document } from "mongoose";
 
 export interface BaseDocument extends Document{
-    id: String,
+    id: string,
     createdAt? : Date,
     updatedAt? : Date,
     isDeleted? : Boolean,

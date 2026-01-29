@@ -3,11 +3,11 @@ import jwt from "jsonwebtoken";
 import { v4 as uuidv4 } from 'uuid';
 
 // generate access token using jwt
-export const generateAccessToken = (userId: string) => {
+export const generateAccessToken = (userId: string, email: string) => {
     return jwt.sign(
-        { userId },
+        { userId, email },
         process.env.JWT_ACCESS_SECRETKEY as string,
-        { expiresIn: "10m" }
+        { expiresIn: "24h" }
     )
 };
 
@@ -34,7 +34,7 @@ export const generateRefreshToken = (userId: string, refreshTokenId: string) => 
             refreshTokenId
         },
         process.env.JWT_REFRESH_SECRETKEY as string,
-        { expiresIn: "10m" }
+        { expiresIn: "24h" }
     )
 };
 
